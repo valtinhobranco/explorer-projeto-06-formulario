@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #55d4fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #02a0d0;
+  border-radius: 5px;
+}
+
+body {
+  background: #e5e5e5;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 368px;
+  width: 100%;
+  background: #121214;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+
+h1,
+button,
+legend {
+  font-family: "Archivo", sans-serif;
+}
+h1 {
+  color: #ffffff;
+  font-size: 36px;
+}
+p {
+  color: #42d3ff;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.form-wrapper {
+  width: 736px;
+  margin: 0 auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.form-wrapper .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 80px 0 48px;
+}
+.form-wrapper form {
+  width: 100%;
+  margin: 0 auto;
+  background: #fafafc;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  border-radius: 8px 8px 0 0;
+}
+.form-wrapper form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-wrapper fieldset legend {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 42px;
+  border-bottom: 1px #e6e6f0 solid;
+  width: 100%;
+  padding: 0 0 16px;
+  color: #32264d;
+}
+
+.form-wrapper fieldset .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-wrapper fieldset .input-wrapper-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.form-wrapper fieldset .input-wrapper-row input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  opacity: 0;
+}
+.form-wrapper fieldset .input-wrapper-row input:checked + label::before {
+  background: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A")
+    no-repeat center center;
+}
+.form-wrapper fieldset .input-wrapper-row input:focus + label::before {
+  outline: 3px solid black;
+}
+.form-wrapper fieldset .input-wrapper-row label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;
+}
+.form-wrapper fieldset .input-wrapper label {
+  display: flex;
+  font-size: 14px;
+  gap: 8px;
+}
+.form-wrapper fieldset .input-wrapper-row label {
+  display: flex;
+  font-size: 14px;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.form-wrapper fieldset .input-wrapper label span {
+  font-size: 12px;
+  color: #736e7c;
+  margin-left: 8px;
+}
+.form-wrapper fieldset .input-wrapper input,
+textarea,
+select {
+  border: #e6e6f0 2px solid;
+  border-radius: 8px;
+  color: #736e7c;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form-wrapper fieldset .input-wrapper input,
+select {
+  font-weight: normal;
+  padding: 15px 24px;
+}
+.form-wrapper fieldset .input-wrapper select {
+  appearance: none;
+  -webkit—appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+    no-repeat right 14px top 50%;
+}
+.form-wrapper fieldset .input-wrapper textarea {
+  padding: 24px;
+  height: 168px;
+  max-width: inherit;
+}
+.form-wrapper fieldset .calendar-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.form-wrapper fieldset .calendar-wrapper .input-wrapper:nth-child(1) {
+  flex: 1;
+}
+
+footer {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f4;
+  padding: 65px 40px;
+  margin-bottom: 90px;
+  border-top: 2px solid #c1bccc;
+  border-radius: 0 0 8px 8px;
+}
+footer button {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #04d361;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+footer button:hover {
+  background: #088d44;
+}
+
+input:focus:invalid:required {
+  outline: 1px solid #ff1010;
+  border: 1px solid transparent;
+}
